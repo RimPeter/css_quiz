@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="../assets/style.css">
-	<!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="stylesheet" href="../assets/style.css" />
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <title>Document</title>
   </head>
   <body>
@@ -12,15 +12,21 @@
       <h1 class="header">CSS QUIZ!!!</h1>
     </header>
     <main>
-      <div><p>question</p></div>
+      <div class="outer-box">
+        <div class="question-box">
+          <p>question</p>
+        </div>
+        
+      </div>
+      
       <div>
-        <form action="">
+        <form class="form-box" action="">
           <input type="text" placeholder="answer" />
           <br />
           <button type="submit">submit</button>
         </form>
       </div>
-      <div>
+      <div class="number-box">
         <div>
           <p>score</p>
         </div>
@@ -30,6 +36,6 @@
       </div>
     </main>
     <footer>footer</footer>
-	<script src="assets/script.js"></script>
+    <script src="assets/script.js"></script>
   </body>
 </html>

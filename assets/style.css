@@ -16,3 +16,35 @@ main {
 footer {
     background-color: blueviolet;
 }
+
+.outer-box {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 40vh; /* Full height of the viewport */
+    
+}
+
+.question-box {
+    width: 30%; /* 30% of the container's (viewport's) width */
+    background-color: lightblue;
+}
+
+.form-box {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-start; /* Centers vertically */
+    height: 5vh; /* Full height of the viewport */
+    padding-top: 10px;
+    background-color: brown;
+    
+}
+
+.number-box {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: flex-start; /* Centers vertically */
+    height: 5vh; /* Full height of the viewport */
+    padding-top: 10px;
+    background-color: bisque;
+}
