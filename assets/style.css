@@ -9,7 +9,7 @@ header {
 }
 
 main {
-    background-color: aqua;
+   
     
 }
 
@@ -18,12 +18,12 @@ footer {
 }
 
 .outer-box {
-    display: flex;
+    //display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     height: 40vh; /* Full height of the viewport */
     
-}
+} 
 
 .question-box {
     width: 30%; /* 30% of the container's (viewport's) width */
