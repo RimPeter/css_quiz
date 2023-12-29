@@ -40,11 +40,23 @@ footer {
     
 }
 
+.submit {
+    margin-left: 10px;
+    padding: 5px;
+}
+
 .number-box {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: flex-start; /* Centers vertically */
     height: 5vh; /* Full height of the viewport */
     padding-top: 10px;
+    gap: 20px;
     background-color: bisque;
+}
+
+.next-question {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
 }

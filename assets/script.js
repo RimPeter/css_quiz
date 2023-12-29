@@ -6,6 +6,9 @@
 //     }, i * 1000);
 // }
 
+
+// question list
+
 let table = {
     "cat":4,
     "centipede":100,
