@@ -18,7 +18,7 @@ footer {
 }
 
 .outer-box {
-    //display: flex;
+    
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
     height: 40vh; /* Full height of the viewport */
