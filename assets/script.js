@@ -14,22 +14,32 @@ let table = {
 }
 
 //generate random number
-let randomNum = Math.floor(Math.random()*8)
-let numQuestion = Object.keys(table)
-let numAnswer = Object.values(table)
+    let randomNum = Math.floor(Math.random()*8)
+    let numAnswer = Object.values(table)[randomNum]
+    let numQuestion = Object.keys(table)[randomNum]
 
 //function for 'next question' button
 function nextQuestion() {
-return console.log(true);
+    let randomNum = Math.floor(Math.random()*8)
+    let numAnswer = Object.values(table)[randomNum]
+    let numQuestion = Object.keys(table)[randomNum]
+    console.log(numAnswer)
+    console.log(numQuestion)
+    document.getElementById("question").innerText = numQuestion
+    return numAnswer
+   
+    
 }
 document.getElementById('next').addEventListener('click', nextQuestion);
+numAnswer = nextQuestion()
+console.log(numAnswer)
+    
 
 
 
 
-console.log();
-console.log();
-console.log();
+
+
 
 
 
