@@ -31,7 +31,7 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     console.log("Input Value is : " + inputValue);
         if (inputValue == legs[randomNum]) {
             console.log(true + "; the input and the answer are the same")
-            
+            return inputValue
         } else {
             console.log(false + "; the input and the answer are NOT thesame")
         }
@@ -50,6 +50,26 @@ console.log("The random number generated is " + randomNum)
     // You can add additional actions here if needed
     console.log("Button was clicked, random number is:", randomNum);
 });
+
+let rightAnswer = legs[randomNum];
+console.log(rightAnswer)
+let inputValue = document.getElementById('userInput').value;
+function compare(A, B) {
+    if (inputValue == rightAnswer) {
+        console.log('it is true')
+    } else {
+        console.log('it is NOT true')
+    }
+
+}
+
+let theResult = compare(inputValue, rightAnswer)
+
+
+
+
+
+
 
 
 
