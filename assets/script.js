@@ -18,17 +18,18 @@ let randomNum = Math.floor(Math.random()*8)
 let numQuestion = Object.keys(table)
 let numAnswer = Object.values(table)
 
+//function for 'next question' button
+function nextQuestion() {
+return console.log(true);
+}
+document.getElementById('next').addEventListener('click', nextQuestion);
 
 
 
 
-
-
-
-
-
-
-
+console.log();
+console.log();
+console.log();
 
 
 
