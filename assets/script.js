@@ -3,15 +3,16 @@
 
 // question list
 let table = {
-    "cat":4,
+    "dog":4,
     "centipede":100,
     "chicken":2,
     "fish":0
 }
 
-//generate random number for the question
-randomNum = Math.floor(Math.random()*4)
+// generate random number for the question
+let randomNum = Math.floor(Math.random()*4)
 console.log("The random number generated is " + randomNum)
+
 
 // variable for question and answer
 let animals = Object.keys(table)
@@ -36,8 +37,19 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
         }
 });
 
+//event listener for the "NEXT QUESTION" button
+const questionButton = document.getElementById('questionButton');
 
+// Add an event listener to the button
+questionButton.addEventListener('click', function() {
+    // Set the variable to true when the button is clicked
+    randomNum = Math.floor(Math.random()*4)
+    document.getElementById('question').textContent = animals[randomNum]
+console.log("The random number generated is " + randomNum)
 
+    // You can add additional actions here if needed
+    console.log("Button was clicked, random number is:", randomNum);
+});
 
 
 
