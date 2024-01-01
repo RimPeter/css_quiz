@@ -32,20 +32,17 @@ document.getElementById('next').addEventListener('click', nextQuestion);
 numAnswer = nextQuestion()
 
 //function for the form section
-let theInput = document.querySelector('.form-box').addEventListener('submit', function(event) {
+
+let storedValue; // Variable to store the input value
+
+document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
     let inputValue = document.getElementById('userInput').value;
-    console.log(inputValue); 
-    return inputValue
+    console.log(inputValue);
+    storedValue = inputValue;
 });
 
-console.log(theInput); 
-
-
-
-
-
-
+console.log(storedValue)
 
 
 
