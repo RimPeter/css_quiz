@@ -27,15 +27,19 @@ function nextQuestion() {
     console.log(numQuestion)
     document.getElementById("question").innerText = numQuestion
     return numAnswer
-   
-    
 }
 document.getElementById('next').addEventListener('click', nextQuestion);
 numAnswer = nextQuestion()
-console.log(numAnswer)
-    
 
+//function for the form section
+let theInput = document.querySelector('.form-box').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    let inputValue = document.getElementById('userInput').value;
+    console.log(inputValue); 
+    return inputValue
+});
 
+console.log(theInput); 
 
 
 
