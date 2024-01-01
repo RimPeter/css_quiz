@@ -40,7 +40,7 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
      // Get the value of the input field
     console.log("Input Value is : " + inputValue);
-        if (inputValue == legs[randomNum]) {
+        if (inputValue == numAnswer[randomNum]) {
             console.log(true + "; the input and the answer are the same")
             return inputValue
         } else {
