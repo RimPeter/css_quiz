@@ -23,26 +23,35 @@ function nextQuestion() {
     let randomNum = Math.floor(Math.random()*8)
     let numAnswer = Object.values(table)[randomNum]
     let numQuestion = Object.keys(table)[randomNum]
-    console.log(numAnswer)
-    console.log(numQuestion)
+    // console.log(numAnswer)
+    // console.log(numQuestion)
     document.getElementById("question").innerText = numQuestion
     return numAnswer
 }
 document.getElementById('next').addEventListener('click', nextQuestion);
 numAnswer = nextQuestion()
-
+console.log("the right answer is: " + numAnswer);
 //function for the form section
 
-let storedValue; // Variable to store the input value
+ // Variable to store the input value
 
 document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
     let inputValue = document.getElementById('userInput').value;
-    console.log(inputValue);
-    storedValue = inputValue;
+    console.log("the input value is " + inputValue);   
+    let score = document.getElementById("score").innerText
+    console.log("the score is: " + score)
+    if (numAnswer == inputValue) {
+        console.log(true)
+
+    } else {
+        console.log(false)
+    }
 });
 
-console.log(storedValue)
+
+
+
 
 
 
