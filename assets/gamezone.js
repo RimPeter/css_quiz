@@ -34,6 +34,10 @@ if (access == true) {
     document.getElementById("answer").innerText = numAnswer;
     console.log("the answer will be: " + numAnswer)
     return numAnswer
+} else {
+    document.getElementById('next').addEventListener('click', function() {
+    alert('Submit first!');
+});
 }
 console.log(access)
 
