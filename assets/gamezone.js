@@ -33,6 +33,13 @@ if (access == true) {
     document.getElementById("question").innerText = numQuestion
     document.getElementById("answer").innerText = numAnswer;
     console.log("the answer will be: " + numAnswer)
+
+for (let i = 10; i >= 0; i--) {
+    setTimeout(function() {
+        console.log(i);
+    }, (10 - i) * 1000);
+}
+
     return numAnswer
 } 
 console.log(access)
