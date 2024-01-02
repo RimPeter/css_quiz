@@ -26,6 +26,8 @@ function nextQuestion() {
     // console.log(numAnswer)
     // console.log(numQuestion)
     document.getElementById("question").innerText = numQuestion
+    document.getElementById("answer").innerText = numAnswer;
+    console.log("hi: " + numAnswer)
     return numAnswer
 }
 document.getElementById('next').addEventListener('click', nextQuestion);
@@ -39,7 +41,7 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     let inputValue = document.getElementById('userInput').value;
     console.log("the input value is " + inputValue); 
     let score = parseInt(document.getElementById("score").innerText, 10);
-    if (numAnswer == inputValue) {
+    if (document.getElementById("answer").innerText == inputValue) {
         console.log("numAnswer is: " + numAnswer);
         console.log("inputValue is: " + inputValue);
         console.log(true);
