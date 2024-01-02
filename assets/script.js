@@ -27,7 +27,7 @@ function nextQuestion() {
     // console.log(numQuestion)
     document.getElementById("question").innerText = numQuestion
     document.getElementById("answer").innerText = numAnswer;
-    console.log("hi: " + numAnswer)
+    console.log("the answer will be: " + numAnswer)
     return numAnswer
 }
 document.getElementById('next').addEventListener('click', nextQuestion);
@@ -41,6 +41,7 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     let inputValue = document.getElementById('userInput').value;
     console.log("the input value is " + inputValue); 
     let score = parseInt(document.getElementById("score").innerText, 10);
+    let life = parseInt(document.getElementById("life").innerText, 10);
     if (document.getElementById("answer").innerText == inputValue) {
         console.log("numAnswer is: " + numAnswer);
         console.log("inputValue is: " + inputValue);
@@ -48,9 +49,13 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
         score += 1; // Increment score
     } else {
         console.log(false);
+        life -= 1
+        
     }
     document.getElementById("score").innerText = score;
+    document.getElementById("life").innerText = life;
     console.log("the score is: " + score);
+    console.log("the life is: " + life);
 });
 
 
