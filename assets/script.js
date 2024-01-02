@@ -53,7 +53,7 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
         let hp = document.getElementById("life").innerText
         console.log(hp);
         if (hp < 2) {
-        document.querySelector('main').innerHTML = '<h2>GAME OVER</h2>';
+        window.location.href = 'gameover.html';
         console.log('GAME OVER');
     }
     }
