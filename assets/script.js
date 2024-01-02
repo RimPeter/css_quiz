@@ -50,13 +50,25 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     } else {
         console.log(false);
         life -= 1
-        
+        let hp = document.getElementById("life").innerText
+        console.log(hp);
+        if (hp < 2) {
+        document.querySelector('main').innerHTML = '<h2>GAME OVER</h2>';
+        console.log('GAME OVER');
+    }
     }
     document.getElementById("score").innerText = score;
     document.getElementById("life").innerText = life;
+
     console.log("the score is: " + score);
     console.log("the life is: " + life);
+
+
 });
+
+
+
+
 
 
 
