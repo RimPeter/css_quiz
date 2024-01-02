@@ -17,6 +17,10 @@ footer {
     background-color: blueviolet;
 }
 
+.hidden {
+    display: none;
+}
+
 .outer-box {
     
     justify-content: center; /* Centers horizontally */

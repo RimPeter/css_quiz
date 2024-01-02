@@ -34,21 +34,22 @@ console.log("the right answer is: " + numAnswer);
 //function for the form section
 
  // Variable to store the input value
-
 document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
     let inputValue = document.getElementById('userInput').value;
-    console.log("the input value is " + inputValue);   
-    let score = document.getElementById("score").innerText
-    console.log("the score is: " + score)
+    console.log("the input value is " + inputValue); 
+    let score = parseInt(document.getElementById("score").innerText, 10);
     if (numAnswer == inputValue) {
-        console.log(true)
-
+        console.log("numAnswer is: " + numAnswer);
+        console.log("inputValue is: " + inputValue);
+        console.log(true);
+        score += 1; // Increment score
     } else {
-        console.log(false)
+        console.log(false);
     }
+    document.getElementById("score").innerText = score;
+    console.log("the score is: " + score);
 });
-
 
 
 
