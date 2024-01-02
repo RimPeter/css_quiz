@@ -1,5 +1,5 @@
 document.getElementById('restart').addEventListener('click', function() {
-    window.location.href = 'index.html';
+window.location.href = 'index.html';
 });
 
 
@@ -21,8 +21,11 @@ let table = {
     let numQuestion = Object.keys(table)[randomNum]
 
 //function for 'next question' button
+let access = true
 function nextQuestion() {
-    let randomNum = Math.floor(Math.random()*8)
+if (access == true) {
+    access = false;
+        let randomNum = Math.floor(Math.random()*8)
     let numAnswer = Object.values(table)[randomNum]
     let numQuestion = Object.keys(table)[randomNum]
     // console.log(numAnswer)
@@ -32,15 +35,24 @@ function nextQuestion() {
     console.log("the answer will be: " + numAnswer)
     return numAnswer
 }
+console.log(access)
+
+}
+
 document.getElementById('next').addEventListener('click', nextQuestion);
 numAnswer = nextQuestion()
 console.log("the right answer is: " + numAnswer);
+
+
+
 //function for the form section
 
  // Variable to store the input value
 document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
-    let inputValue = document.getElementById('userInput').value;
+    if (access == false) {
+        access = true
+            let inputValue = document.getElementById('userInput').value;
     console.log("the input value is " + inputValue); 
     let score = parseInt(document.getElementById("score").innerText, 10);
     let life = parseInt(document.getElementById("life").innerText, 10);
@@ -64,6 +76,8 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
 
     console.log("the score is: " + score);
     console.log("the life is: " + life);
+    }
+
 
 
 });
