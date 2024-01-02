@@ -6,12 +6,18 @@
     <link rel="stylesheet" href="../assets/style.css" />
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
     <title>CSS QUIZ!!</title>
-    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.ico>">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.ico">
 </head>
 <body>
     <h1>
         GAME OVER
-        <button id="nextPageButton">Go to Next Page</button>
+        <button id="restart">Restart</button>
     </h1>
+
+    <script>
+        document.getElementById('restart').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
 </body>
 </html>
