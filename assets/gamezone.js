@@ -34,12 +34,7 @@ if (access == true) {
     document.getElementById("answer").innerText = numAnswer;
     console.log("the answer will be: " + numAnswer)
     return numAnswer
-} else {
-    document.getElementById('next').addEventListener('click', function() {
-    alert('Submit first!');
-    console.log('alert next')
-});
-}
+} 
 console.log(access)
 
 }
@@ -81,12 +76,7 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
 
     console.log("the score is: " + score);
     console.log("the life is: " + life);
-    } else {
-    document.getElementById('userInput').addEventListener('click', function() {
-    alert('Submit is done!');
-    console.log('alert submit')
-});
-}
+    } 
 
 
 
