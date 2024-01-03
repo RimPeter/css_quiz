@@ -186,6 +186,33 @@ for (let i = 10; i >= 0; i--) {
         document.getElementById("countdown").innerText = i;
         if (i < 1) {
             console.log("zero")
+            if (access == false) {
+        access = true
+            let inputValue = document.getElementById('userInput').value;
+    console.log("the input value is " + inputValue); 
+    let score = parseInt(document.getElementById("score").innerText, 10);
+    let life = parseInt(document.getElementById("life").innerText, 10);
+    if (document.getElementById("answer").innerText == inputValue) {
+        console.log("numAnswer is: " + numAnswer);
+        console.log("inputValue is: " + inputValue);
+        console.log(true);
+        score += 1; // Increment score
+    } else {
+        console.log(false);
+        life -= 1
+        let hp = document.getElementById("life").innerText
+        console.log(hp);
+        if (hp < 2) {
+        window.location.href = 'gameover.html';
+        console.log('GAME OVER');
+    }
+    }
+    document.getElementById("score").innerText = score;
+    document.getElementById("life").innerText = life;
+
+    console.log("the score is: " + score);
+    console.log("the life is: " + life);
+    } 
         }
     }, (10 - i) * 1000);
 }
