@@ -169,57 +169,55 @@ console.log("the random number is: " + randomNum)
 //function for 'next question' button
 let access = true
 function nextQuestion() {
-if (access == true) {
-    access = false;
+    if (access == true) {
+        access = false;
         let randomNum = Math.floor(Math.random()*Object.values(table).length)
-    let numAnswer = Object.values(table)[randomNum]
-    let numQuestion = Object.keys(table)[randomNum]
-    // console.log(numAnswer)
-    // console.log(numQuestion)
-    document.getElementById("question").innerText = numQuestion
-    document.getElementById("answer").innerText = numAnswer;
-    console.log("the answer will be: " + numAnswer)
-
-for (let i = 30; i >= 0; i--) {
-    setTimeout(function() {
-        console.log(i);
-        document.getElementById("countdown").innerText = i;
-        if (i < 1) {
-            console.log("zero")
-            if (access == false) {
-        access = true
-            let inputValue = document.getElementById('userInput').value;
-    console.log("the input value is " + inputValue); 
-    let score = parseInt(document.getElementById("score").innerText, 10);
-    let life = parseInt(document.getElementById("life").innerText, 10);
-    if (document.getElementById("answer").innerText == inputValue) {
-        console.log("numAnswer is: " + numAnswer);
-        console.log("inputValue is: " + inputValue);
-        console.log(true);
-        score += 1; // Increment score
-    } else {
-        console.log(false);
-        life -= 1
-        let hp = document.getElementById("life").innerText
-        console.log(hp);
-        if (hp < 2) {
-        window.location.href = 'gameover.html';
-        console.log('GAME OVER');
-    }
-    }
-    document.getElementById("score").innerText = score;
-    document.getElementById("life").innerText = life;
-
-    console.log("the score is: " + score);
-    console.log("the life is: " + life);
+        let numAnswer = Object.values(table)[randomNum]
+        let numQuestion = Object.keys(table)[randomNum]
+        // console.log(numAnswer)
+        // console.log(numQuestion)
+        document.getElementById("question").innerText = numQuestion
+        document.getElementById("answer").innerText = numAnswer;
+        console.log("the answer will be: " + numAnswer)
+            for (let i = 30; i >= 0; i--) {
+                setTimeout(function() {
+                    console.log("time left: " + i);
+                    document.getElementById("countdown").innerText = i;
+                    
+                    if (i < 1) {
+                        console.log("zero")
+                        if (access == false) {
+                            access = true
+                            let inputValue = document.getElementById('userInput').value;
+                            console.log("the input value is " + inputValue); 
+                            let score = parseInt(document.getElementById("score").innerText, 10);
+                            let life = parseInt(document.getElementById("life").innerText, 10);
+                            if (document.getElementById("answer").innerText == inputValue) {
+                                console.log("numAnswer is: " + numAnswer);
+                                console.log("inputValue is: " + inputValue);
+                                console.log(true);
+                                score += 1; // Increment score
+                            } else {
+                                console.log(false);
+                                life -= 1
+                                let hp = document.getElementById("life").innerText
+                                console.log(hp);
+                                if (hp < 2) {
+                                    window.location.href = 'gameover.html';
+                                    console.log('GAME OVER');
+                                }
+                            }
+                            document.getElementById("score").innerText = score;
+                            document.getElementById("life").innerText = life;
+                            console.log("the score is: " + score);
+                            console.log("the life is: " + life);
+                        } 
+                    }
+                }, (30 - i) * 1000);
+            }
+        return numAnswer
     } 
-        }
-    }, (30 - i) * 1000);
-}
-
-    return numAnswer
-} 
-console.log(access)
+    console.log(access)
 
 }
 
