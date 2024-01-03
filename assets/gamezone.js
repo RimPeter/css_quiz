@@ -161,16 +161,17 @@ let table = {
 
 
 //generate random number
-    let randomNum = Math.floor(Math.random()*8)
+
+    let randomNum = Math.floor(Math.random()*Object.values(table).length)
     let numAnswer = Object.values(table)[randomNum]
     let numQuestion = Object.keys(table)[randomNum]
-
+console.log("the random number is: " + randomNum)
 //function for 'next question' button
 let access = true
 function nextQuestion() {
 if (access == true) {
     access = false;
-        let randomNum = Math.floor(Math.random()*8)
+        let randomNum = Math.floor(Math.random()*Object.values(table).length)
     let numAnswer = Object.values(table)[randomNum]
     let numQuestion = Object.keys(table)[randomNum]
     // console.log(numAnswer)
@@ -181,7 +182,7 @@ if (access == true) {
 
 for (let i = 10; i >= 0; i--) {
     setTimeout(function() {
-        console.log(i);
+        //console.log(i);
         document.getElementById("countdown").innerText = i;
     }, (10 - i) * 1000);
 }
