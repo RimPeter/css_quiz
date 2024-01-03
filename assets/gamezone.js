@@ -184,6 +184,9 @@ for (let i = 10; i >= 0; i--) {
     setTimeout(function() {
         //console.log(i);
         document.getElementById("countdown").innerText = i;
+        if (i < 1) {
+            console.log("zero")
+        }
     }, (10 - i) * 1000);
 }
 
