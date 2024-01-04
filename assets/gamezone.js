@@ -183,7 +183,7 @@ function nextQuestion() {
         document.getElementById("answer").innerText = numAnswer;
         console.log("the answer will be: " + numAnswer)
 
-            for (let i = 30; i >= 0; i--) {
+            for (let i = 20; i >= 0; i--) {
                 setTimeout(function() {
                     
                     console.log("time left: " + i);
@@ -220,7 +220,7 @@ function nextQuestion() {
                             console.log("the life is: " + life);
                         } 
                     }
-                }, (30 - i) * 1000);
+                }, (20 - i) * 1000);
              
             }
 
@@ -269,11 +269,13 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
         console.log("the score is: " + score);
         console.log("the life is: " + life);
     } 
+    document.getElementById('userInput').value = '';
 });
 
 document.getElementById('userInput').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault();  
+        event.preventDefault(); 
+        document.getElementById('userInput').value = ''; 
         
 if (access == false) {
         access = true
@@ -304,6 +306,7 @@ if (access == false) {
     } 
         console.log("enter pressed")
     }
+    
 });
 
 
