@@ -168,7 +168,10 @@ let table = {
 console.log("the random number is: " + randomNum)
 //function for 'next question' button
 let access = true
+let countDownspeed;
 function nextQuestion() {
+        document.getElementById('countdown').classList.remove('hidden');
+    
     if (access == true) {
         access = false;
         let randomNum = Math.floor(Math.random()*Object.values(table).length)
@@ -179,9 +182,12 @@ function nextQuestion() {
         document.getElementById("question").innerText = numQuestion
         document.getElementById("answer").innerText = numAnswer;
         console.log("the answer will be: " + numAnswer)
+
             for (let i = 30; i >= 0; i--) {
                 setTimeout(function() {
+                    
                     console.log("time left: " + i);
+                    
                     document.getElementById("countdown").innerText = i;
                     
                     if (i < 1) {
@@ -209,12 +215,15 @@ function nextQuestion() {
                             }
                             document.getElementById("score").innerText = score;
                             document.getElementById("life").innerText = life;
+
                             console.log("the score is: " + score);
                             console.log("the life is: " + life);
                         } 
                     }
                 }, (30 - i) * 1000);
+             
             }
+
         return numAnswer
     } 
     console.log(access)
@@ -228,41 +237,38 @@ console.log("the right answer is: " + numAnswer);
 
 
 
-//function for the form section
 
- // Variable to store the input value
 document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
+    countDownspeed = 1
+    document.getElementById('countdown').classList.add('hidden');
     if (access == false) {
         access = true
-            let inputValue = document.getElementById('userInput').value;
-    console.log("the input value is " + inputValue); 
-    let score = parseInt(document.getElementById("score").innerText, 10);
-    let life = parseInt(document.getElementById("life").innerText, 10);
-    if (document.getElementById("answer").innerText == inputValue) {
-        console.log("numAnswer is: " + numAnswer);
-        console.log("inputValue is: " + inputValue);
-        console.log(true);
-        score += 1; // Increment score
-    } else {
-        console.log(false);
-        life -= 1
-        let hp = document.getElementById("life").innerText
-        console.log(hp);
-        if (hp < 2) {
-        window.location.href = 'gameover.html';
-        console.log('GAME OVER');
-    }
-    }
-    document.getElementById("score").innerText = score;
-    document.getElementById("life").innerText = life;
+        let inputValue = document.getElementById('userInput').value;
+        console.log("the input value is " + inputValue); 
+        let score = parseInt(document.getElementById("score").innerText, 10);
+        let life = parseInt(document.getElementById("life").innerText, 10);
+        if (document.getElementById("answer").innerText == inputValue) {
+            console.log("numAnswer is: " + numAnswer);
+            console.log("inputValue is: " + inputValue);
+            console.log(true);
+            score += 1; // Increment score
+        } else {
+            console.log(false);
+            life -= 1
+            let hp = document.getElementById("life").innerText
+            console.log(hp);
+            if (hp < 2) {
+            window.location.href = 'gameover.html';
+            console.log('GAME OVER');
+        }
+        }
+        document.getElementById("score").innerText = score;
+        document.getElementById("life").innerText = life;
 
-    console.log("the score is: " + score);
-    console.log("the life is: " + life);
+        console.log("the score is: " + score);
+        console.log("the life is: " + life);
     } 
-
-
-
 });
 
 document.getElementById('userInput').addEventListener('keypress', function(event) {
