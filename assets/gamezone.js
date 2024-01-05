@@ -167,42 +167,20 @@ let table = {
 
 //function for 'next question' button
 let access = true
+
 function nextQuestion() {
-if (access == true) {
-    access = false;
+    if (access == true) {
+        access = false;
         let randomNum = Math.floor(Math.random()*8)
-    let numAnswer = Object.values(table)[randomNum]
-    let numQuestion = Object.keys(table)[randomNum]
-    // console.log(numAnswer)
-    // console.log(numQuestion)
-    document.getElementById("question").innerText = numQuestion
-    document.getElementById("answer").innerText = numAnswer;
-    console.log("the answer will be: " + numAnswer)
-
-// for (let i = 10; i >= 0; i--) {
-//     setTimeout(function() {
-//         console.log(i);
-//     }, (10 - i) * 1000);
-// }
-// countdown:
-let countdown = 30;
-function Countdown() {
-    countdown--;
-    document.getElementById('countdown').innerText = countdown + ' seconds remaining';
-    // when the countdown is zero, the timer stops
-    if (countdown <= 0) {
-        clearInterval(interval);
-        document.getElementById('countdown').innerText = 'Time is up!';
-    }
-    
-}
-// Start the countdown using setInterval
-let interval = setInterval(Countdown, 1000);
-
-    return numAnswer
-} 
-console.log(access)
-
+        let numAnswer = Object.values(table)[randomNum]
+        let numQuestion = Object.keys(table)[randomNum]
+        document.getElementById("question").innerText = numQuestion
+        document.getElementById("answer").innerText = numAnswer;
+        console.log("the answer will be: " + numAnswer)
+        let countdown = 30;
+        return numAnswer
+    } 
+    console.log(access)
 }
 
 document.getElementById('next').addEventListener('click', nextQuestion);
@@ -216,6 +194,7 @@ console.log("the right answer is: " + numAnswer);
  // Variable to store the input value
 document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
+    
     if (access == false) {
         access = true
             let inputValue = document.getElementById('userInput').value;
