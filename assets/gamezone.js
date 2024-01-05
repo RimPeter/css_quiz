@@ -169,7 +169,9 @@ let table = {
 let access = true
 
 function nextQuestion() {
+    document.getElementById("answer").setAttribute("hidden", "the-answer");
     document.getElementById("userInput").value = "";
+    document.getElementById("userInput").focus();
     if (access == true) {
         access = false;
         let randomNum = Math.floor(Math.random()*8)
@@ -195,6 +197,7 @@ console.log("the right answer is: " + numAnswer);
  // Variable to store the input value
 document.querySelector('.form-box').addEventListener('submit', function(event) {
     event.preventDefault(); 
+    document.getElementById("answer").removeAttribute("hidden");
     
     if (access == false) {
         access = true
