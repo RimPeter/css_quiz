@@ -161,7 +161,7 @@ let table = {
 
 
 //generate random number
-    let randomNum = Math.floor(Math.random()*8)
+    let randomNum = Math.floor(Math.random()*Object.keys(table).length)
     let numAnswer = Object.values(table)[randomNum]
     let numQuestion = Object.keys(table)[randomNum]
 
