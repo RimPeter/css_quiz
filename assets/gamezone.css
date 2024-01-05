@@ -37,7 +37,7 @@ footer {
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: flex-start; /* Centers vertically */
-    height: 10vh; /* Full height of the viewport */
+    height: 30vh; /* Full height of the viewport */
     padding-top: 10px;
     background-color: brown;
     
