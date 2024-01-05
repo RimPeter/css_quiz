@@ -169,6 +169,7 @@ let table = {
 let access = true
 
 function nextQuestion() {
+    document.getElementById("userInput").value = "";
     if (access == true) {
         access = false;
         let randomNum = Math.floor(Math.random()*8)
