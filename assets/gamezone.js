@@ -179,11 +179,25 @@ if (access == true) {
     document.getElementById("answer").innerText = numAnswer;
     console.log("the answer will be: " + numAnswer)
 
-for (let i = 10; i >= 0; i--) {
-    setTimeout(function() {
-        console.log(i);
-    }, (10 - i) * 1000);
+// for (let i = 10; i >= 0; i--) {
+//     setTimeout(function() {
+//         console.log(i);
+//     }, (10 - i) * 1000);
+// }
+// countdown:
+let countdown = 30;
+function Countdown() {
+    countdown--;
+    document.getElementById('countdown').innerText = countdown + ' seconds remaining';
+    // when the countdown is zero, the timer stops
+    if (countdown <= 0) {
+        clearInterval(interval);
+        document.getElementById('countdown').innerText = 'Time is up!';
+    }
+    
 }
+// Start the countdown using setInterval
+let interval = setInterval(Countdown, 1000);
 
     return numAnswer
 } 
