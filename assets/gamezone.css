@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+
+#background {
+    background-image: url('../assets/images/question-zone-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 1000px;
+    left: auto;
+    right: auto;
+    
+}
+
+
 header {
     background-color: blue;
 }

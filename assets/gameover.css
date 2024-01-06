@@ -1,1 +1,7 @@
 
+#background {
+    background-image: url('../assets/images/game_over_background_image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}

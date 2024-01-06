@@ -1,7 +1,8 @@
-#front {
+#background {
     background-image: url('../assets/images/start_image.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-attachment: fixed;
+    max-width: 1000px;
 }
 
