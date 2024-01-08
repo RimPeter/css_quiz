@@ -235,12 +235,12 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     console.log("the score is: " + score);
     console.log("the life is: " + life);
     } 
-    setTimeout(alive, 2750);
+    setTimeout(bullethole, 2750);
     shotgun();
 });
 
 
-function alive() {
+function bullethole() {
     let life = parseInt(document.getElementById('life').textContent, 10);
     console.log("Life value:", life);
 
