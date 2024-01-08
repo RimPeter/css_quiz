@@ -166,6 +166,12 @@ let table = {
     let numQuestion = Object.keys(table)[randomNum]
 
 //function for 'next question' button
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') { 
+        event.preventDefault(); 
+        document.getElementById('next').click();
+    }
+});
 let access = true
 
 function nextQuestion() {
@@ -245,6 +251,7 @@ function alive() {
     let friend8 = document.getElementById('friend8');
     let friend9 = document.getElementById('friend9');
     console.log("image replace1");
+    
     if (life < 1) {
         friend1.style.backgroundImage = "url('../assets/images/bullethole.png')";
     }  
