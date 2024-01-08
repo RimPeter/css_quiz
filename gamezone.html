@@ -19,30 +19,37 @@
 
     <main>
       <div id="background">
-        <div>
-          <div class="next-question">
-            <button id="restart">Restart</button>
-          </div>
-          <div>
-            <button id="next" type="button">NEXT QUESTION</button>
-          </div>
+        <div class="next-question box">
+          <button id="restart" class="container">Restart</button>
         </div>
-        <div>
-          <div>
-            <p id="answer" class="the-answer">answer</p>
-          </div>
+        <div class="box">
+          <button id="next" class="container" type="button">
+            NEXT QUESTION (space bar)
+          </button>
         </div>
-        <div class="outer-box">
-          <div class="question-box">
+
+        <div class="outer-box box">
+          <div class="question-box container">
             <p id="question">question</p>
           </div>
         </div>
-        <div>
+
+        <div class="box">
           <div>
+            <div>
+              <p id="answer" class="the-answer container">answer
+
+              </p>
+            </div>
             <form class="form-box" action="">
-              <input type="text" id="userInput" placeholder="answer" />
+              <input
+                type="text"
+                id="userInput"
+                class="container"
+                placeholder="answer"
+              />
               <br />
-              <button class="submit" type="submit">submit</button>
+              <button id="submit" class="submit container" type="submit">submit</button>
             </form>
           </div>
 
@@ -50,17 +57,17 @@
             <p id="countdown">hi</p>
           </div> -->
         </div>
-        <div class="number-box">
-          <div>
-            <div>
+        <div class="number-box box">
+          <div class="container">
+            <div class="box2">
               <p>score</p>
             </div>
-            <div>
+            <div class="box2">
               <p id="score">0</p>
             </div>
           </div>
 
-          <div>
+          <div class="container">
             <div>
               <p id="hp">HP</p>
             </div>
@@ -68,6 +75,17 @@
               <p id="life">9</p>
             </div>
           </div>
+        </div>
+        <div class="friends">
+          <div id="friend1" class="friend_property"></div>
+          <div id="friend2" class="friend_property"></div>
+          <div id="friend3" class="friend_property"></div>
+          <div id="friend4" class="friend_property"></div>
+          <div id="friend5" class="friend_property"></div>
+          <div id="friend6" class="friend_property"></div>
+          <div id="friend7" class="friend_property"></div>
+          <div id="friend8" class="friend_property"></div>
+          <div id="friend9" class="friend_property"></div>
         </div>
       </div>
     </main>

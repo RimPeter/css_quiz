@@ -1,60 +1,145 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
 
 #background {
-    /* background-image: url('../assets/images/question-zone-background.jpeg'); */
-    width: 1000px;
-    background-color: cadetblue;
-
+  background-image: url('../assets/images/question-zone-background.jpeg');
+  width: 90vw;
+  max-width: 1000px;
+  /* background-color: cadetblue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 1200px;
+  justify-content: space-around;
 }
 
+.box {
+  
+}
+
+#restart {
+    background-color: rgb(180, 118, 238);
+}
+
+.box2 {
+}
 
 header {
-    background-color: blue;
+  background-color: blue;
 }
 
 #next {
-    background-color: green;
+  /* background-color: green; */
+  background-color: rgb(180, 118, 238);
 }
 
 footer {
-    background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .outer-box {
-    
-  
-    
-} 
+}
 
 .question-box {
-   
-    background-color: lightblue;
+  /* background-color: lightblue; */
 }
 
 .form-box {
-   
-    background-color: brown;
-    
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
 }
 
-.submit {
-   
+#submit {
+    background-color: rgb(180, 118, 238);
 }
 
 .number-box {
-    
-    background-color: bisque;
+  /* background-color: bisque; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center ;
+}
+
+.container {
+padding-left: 25px;
+padding-right: 25px;
+border: 5px solid rgb(18, 230, 18);
+border-radius: 10px;
+margin: 10px;
+background-color: rgb(235, 220, 18);
+min-height: 40px;
+font-size: 1.2em;
+max-width: 90vw;
+
 }
 
 .next-question {
-   
+}
+
+.friends {
+  height: 500px;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+    width: 90vw;
+  max-width: 560px;
+}
+
+.friend_property {
+  border: 2px solid black;
+  height: 140px;
+  width: 140px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 10px;
+}
+
+#friend1 {
+  background-image: url("../assets/images/1st_friend.jpeg");
+}
+
+#friend2 {
+  background-image: url("../assets/images/2nd_friend.jpeg");
+}
+
+#friend3 {
+  background-image: url("../assets/images/3rd_friend.jpeg");
+}
+
+#friend4 {
+  background-image: url("../assets/images/4th_friend.jpeg");
+}
+
+#friend5 {
+  background-image: url("../assets/images/5th_friend.jpeg");
+}
+
+#friend6 {
+  background-image: url("../assets/images/6th_friend.jpeg");
+}
+
+#friend7 {
+  background-image: url("../assets/images/7th_friend.jpeg");
+}
+
+#friend8 {
+  background-image: url("../assets/images/8th_friend.jpeg");
+}
+
+#friend9 {
+  background-image: url("../assets/images/9th_friend.jpeg");
 }
