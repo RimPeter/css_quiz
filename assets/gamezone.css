@@ -6,14 +6,10 @@
 
 
 #background {
-    background-image: url('../assets/images/question-zone-background.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    max-width: 1000px;
-    left: auto;
-    right: auto;
-    
+    /* background-image: url('../assets/images/question-zone-background.jpeg'); */
+    width: 1000px;
+    background-color: cadetblue;
+
 }
 
 
@@ -35,44 +31,30 @@ footer {
 
 .outer-box {
     
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    height: 40vh; /* Full height of the viewport */
+  
     
 } 
 
 .question-box {
-    width: 30%; /* 30% of the container's (viewport's) width */
+   
     background-color: lightblue;
 }
 
 .form-box {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: flex-start; /* Centers vertically */
-    height: 30vh; /* Full height of the viewport */
-    padding-top: 10px;
+   
     background-color: brown;
     
 }
 
 .submit {
-    margin-left: 10px;
-    padding: 5px;
+   
 }
 
 .number-box {
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: flex-start; /* Centers vertically */
-    height: 5vh; /* Full height of the viewport */
-    padding-top: 10px;
-    gap: 20px;
+    
     background-color: bisque;
 }
 
 .next-question {
-    display: flex;
-    justify-content: center;
-    padding: 25px;
+   
 }

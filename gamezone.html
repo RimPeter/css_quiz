@@ -13,16 +13,17 @@
     />
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <h1 class="header">CSS QUIZ!!!</h1>
-    </header>
+    </header> -->
 
     <main>
       <div id="background">
         <div>
           <div class="next-question">
             <button id="restart">Restart</button>
-
+          </div>
+          <div>
             <button id="next" type="button">NEXT QUESTION</button>
           </div>
         </div>
@@ -36,34 +37,41 @@
             <p id="question">question</p>
           </div>
         </div>
-      </div>
+        <div>
+          <div>
+            <form class="form-box" action="">
+              <input type="text" id="userInput" placeholder="answer" />
+              <br />
+              <button class="submit" type="submit">submit</button>
+            </form>
+          </div>
 
-      <div>
-        <form class="form-box" action="">
-          <input type="text" id="userInput" placeholder="answer" />
-          <br />
-          <button class="submit" type="submit">submit</button>
-        </form>
-        <div>
-          <p id="countdown">hi</p>
+          <!-- <div>
+            <p id="countdown">hi</p>
+          </div> -->
         </div>
-      </div>
-      <div class="number-box">
-        <div>
-          <p>score</p>
-        </div>
-        <div>
-          <p id="score">0</p>
-        </div>
-        <div>
-          <p id="hp">HP</p>
-        </div>
-        <div>
-          <p id="life">9</p>
+        <div class="number-box">
+          <div>
+            <div>
+              <p>score</p>
+            </div>
+            <div>
+              <p id="score">0</p>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <p id="hp">HP</p>
+            </div>
+            <div>
+              <p id="life">9</p>
+            </div>
+          </div>
         </div>
       </div>
     </main>
-    <footer>footer</footer>
+    <!-- <footer>footer</footer> -->
     <script src="assets/gamezone.js"></script>
   </body>
 </html>
