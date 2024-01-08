@@ -226,10 +226,56 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     console.log("the score is: " + score);
     console.log("the life is: " + life);
     } 
-
-
+alive();
 
 });
+
+
+function alive() {
+    let life = parseInt(document.getElementById('life').textContent, 10);
+    console.log("Life value:", life);
+
+    let friend1 = document.getElementById('friend1');
+    let friend2 = document.getElementById('friend2');
+    let friend3 = document.getElementById('friend3');
+    let friend4 = document.getElementById('friend4');
+    let friend5 = document.getElementById('friend5');
+    let friend6 = document.getElementById('friend6');
+    let friend7 = document.getElementById('friend7');
+    let friend8 = document.getElementById('friend8');
+    let friend9 = document.getElementById('friend9');
+    console.log("image replace1");
+    if (life < 1) {
+        friend1.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    }  
+    if (life < 2) {
+        friend2.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    }  
+    if (life < 3) {
+        friend3.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+    if (life < 4) {
+        friend4.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+    if (life < 5) {
+        friend5.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+    if (life < 6) {
+        friend6.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+    if (life < 7) {
+        friend7.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+    if (life < 8) {
+        friend8.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+    if (life < 9) {
+        friend9.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    } 
+
+
+}
+
 
 
 
