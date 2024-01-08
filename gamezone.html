@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/gamezone.css" />
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <title>CSS QUIZ!!</title>
     <link
       rel="icon"
@@ -22,6 +22,10 @@
         <div class="next-question box">
           <button id="restart" class="container">Restart</button>
         </div>
+        <div id="soundbutton" class="container">
+          <button id="sound">Sound On</button>
+          <audio id="shotgun" src="../assets/sound/shotgun.mp3"></audio>
+        </div>
         <div class="box">
           <button id="next" class="container" type="button">
             NEXT QUESTION (space bar)
@@ -37,9 +41,7 @@
         <div class="box">
           <div>
             <div>
-              <p id="answer" class="the-answer container">answer
-
-              </p>
+              <p id="answer" class="the-answer container">answer</p>
             </div>
             <form class="form-box" action="">
               <input
@@ -49,13 +51,11 @@
                 placeholder="answer"
               />
               <br />
-              <button id="submit" class="submit container" type="submit">submit</button>
+              <button id="submit" class="submit container" type="submit">
+                submit
+              </button>
             </form>
           </div>
-
-          <!-- <div>
-            <p id="countdown">hi</p>
-          </div> -->
         </div>
         <div class="number-box box">
           <div class="container">
@@ -75,7 +75,6 @@
               <p id="life">9</p>
             </div>
           </div>
-          
         </div>
         <div class="friends">
           <div id="friend1" class="friend_property"></div>
@@ -92,6 +91,5 @@
     </main>
     <!-- <footer>footer</footer> -->
     <script src="assets/gamezone.js"></script>
-    <audio id="shotgun" src="../assets/sound/shotgun.mp3"></audio>
   </body>
 </html>

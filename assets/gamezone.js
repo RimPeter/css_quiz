@@ -338,7 +338,21 @@ function shotgun() {
     } 
 }
 
+let soundOfShotgun = true;
+function toggleSound() {
+    soundOfShotgun = !soundOfShotgun; //toggle the state
 
+    var audio = document.getElementById('shotgun');
+    if (soundOfShotgun) {
+        audio.muted = false; //unmute the sound
+        document.getElementById('sound').innerText = "Sound ON"
+    } else {
+        audio.muted = true; //mute the sound
+        document.getElementById('sound').innerText = "Sound OFF"
+    }
+}
+
+document.getElementById('sound').addEventListener('click', toggleSound);
 
 
 

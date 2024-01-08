@@ -87,6 +87,18 @@ max-width: 90vw;
 .next-question {
 }
 
+#soundbutton {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(180, 118, 238);
+}
+
+#sound {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2em;
+}
+
 .friends {
   height: 500px;
   /* border: 2px solid black; */
