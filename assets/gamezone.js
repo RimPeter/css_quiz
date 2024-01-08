@@ -222,7 +222,10 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
         let hp = document.getElementById("life").innerText
         console.log(hp);
         if (hp < 2) {
-        window.location.href = 'gameover.html';
+          setTimeout(function() {
+    window.location.href = 'gameover.html';
+}, 7000);  
+        
         console.log('GAME OVER');
     }
     }
@@ -232,8 +235,8 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     console.log("the score is: " + score);
     console.log("the life is: " + life);
     } 
-alive();
-
+    setTimeout(alive, 2750);
+    shotgun();
 });
 
 
@@ -279,14 +282,61 @@ function alive() {
     if (life < 9) {
         friend9.style.backgroundImage = "url('../assets/images/bullethole.png')";
     } 
-
-
 }
 
 
+function shotgun() {
+    let life = parseInt(document.getElementById('life').textContent, 10);
+    console.log("Life value:", life);
 
-
-
+    let friend1 = document.getElementById('friend1');
+    let friend2 = document.getElementById('friend2');
+    let friend3 = document.getElementById('friend3');
+    let friend4 = document.getElementById('friend4');
+    let friend5 = document.getElementById('friend5');
+    let friend6 = document.getElementById('friend6');
+    let friend7 = document.getElementById('friend7');
+    let friend8 = document.getElementById('friend8');
+    let friend9 = document.getElementById('friend9');
+    console.log("image replace1");
+    
+    if (life < 1) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    }  
+    if (life < 2) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    }  
+    if (life < 3) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+    if (life < 4) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+    if (life < 5) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+    if (life < 6) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+    if (life < 7) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+    if (life < 8) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+    if (life < 9) {
+    let audio = document.getElementById('shotgun');
+    audio.play();
+    } 
+}
 
 
 
