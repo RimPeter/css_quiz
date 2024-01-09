@@ -173,6 +173,7 @@ document.addEventListener('keydown', function(event) {
     }
 });
 let access = true
+let shotgun1 = true
 
 function nextQuestion() {
     document.getElementById("answer").setAttribute("hidden", "the-answer");
@@ -237,6 +238,8 @@ document.querySelector('.form-box').addEventListener('submit', function(event) {
     } 
     setTimeout(bullethole, 2750);
     shotgun();
+
+    
 });
 
 
@@ -287,53 +290,9 @@ function bullethole() {
 
 function shotgun() {
     let life = parseInt(document.getElementById('life').textContent, 10);
-    console.log("Life value:", life);
-
-    let friend1 = document.getElementById('friend1');
-    let friend2 = document.getElementById('friend2');
-    let friend3 = document.getElementById('friend3');
-    let friend4 = document.getElementById('friend4');
-    let friend5 = document.getElementById('friend5');
-    let friend6 = document.getElementById('friend6');
-    let friend7 = document.getElementById('friend7');
-    let friend8 = document.getElementById('friend8');
-    let friend9 = document.getElementById('friend9');
-    console.log("image replace1");
     
-    if (life < 1) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    }  
-    if (life < 2) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    }  
-    if (life < 3) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    } 
-    if (life < 4) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    } 
-    if (life < 5) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    } 
-    if (life < 6) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    } 
-    if (life < 7) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    } 
-    if (life < 8) {
-    let audio = document.getElementById('shotgun');
-    audio.play();
-    } 
     if (life < 9) {
-    let audio = document.getElementById('shotgun');
+    let audio = document.getElementById("shotgun");
     audio.play();
     } 
 }
