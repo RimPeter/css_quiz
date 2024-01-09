@@ -261,7 +261,6 @@ let table = {
     "text-indent",
 };
 
-
 //function for 'next question' button
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {
@@ -285,7 +284,7 @@ function nextQuestion() {
     document.getElementById("question").innerText = numQuestion;
     document.getElementById("answer").innerText = numAnswer;
     console.log("the answer will be: " + numAnswer);
-  
+
     return numAnswer;
   }
   console.log(access);
@@ -294,29 +293,32 @@ function nextQuestion() {
 document.getElementById("next").addEventListener("click", nextQuestion);
 numAnswer = nextQuestion();
 
-
-
 // Variable to store the input value
-document.querySelector(".form-box").addEventListener("submit", function (event) {
+document
+  .querySelector(".form-box")
+  .addEventListener("submit", function (event) {
     event.preventDefault();
     document.getElementById("answer").removeAttribute("hidden");
 
     if (access == false) {
       access = true;
       let inputValue = document.getElementById("userInput").value;
-      
       let score = parseInt(document.getElementById("score").innerText, 10);
       let life = parseInt(document.getElementById("life").innerText, 10);
+
       if (document.getElementById("answer").innerText == inputValue) {
-        console.log("numAnswer is: " + numAnswer);
-        console.log("inputValue is: " + inputValue);
-        console.log(true);
         score += 1; // Increment score
+        console.log("woo-hoo2");
+        let joy = document.getElementById("joy");
+        joy.play();
       } else {
-        
         life -= 1;
+        console.log("oh-oh2");
+        let shotgunsound = document.getElementById("shotgun");
+        shotgunsound.play();
+
         let hp = document.getElementById("life").innerText;
-        
+
         if (hp < 2) {
           setTimeout(function () {
             window.location.href = "gameover.html";
@@ -325,13 +327,11 @@ document.querySelector(".form-box").addEventListener("submit", function (event) 
           console.log("GAME OVER");
         }
       }
+
       document.getElementById("score").innerText = score;
       document.getElementById("life").innerText = life;
-
-
     }
     setTimeout(bullethole, 2750);
-    shotgun();
   });
 
 function bullethole() {
@@ -346,7 +346,6 @@ function bullethole() {
   let friend7 = document.getElementById("friend7");
   let friend8 = document.getElementById("friend8");
   let friend9 = document.getElementById("friend9");
-
 
   if (life < 1) {
     friend1.style.backgroundImage = "url('assets/images/bullethole2.png')";
@@ -377,18 +376,18 @@ function bullethole() {
   }
 }
 
-function shotgun() {
-  let life = parseInt(document.getElementById("life").textContent, 10);
+// function shotgun() {
+//   let life = parseInt(document.getElementById("life").textContent, 10);
 
-  if (life < 9) {
-    let audio = document.getElementById("shotgun");
-    if (soundtrack == true) {
-        audio.play();
-        soundtrack = false;
-    }
-    
-  }
-}
+//   if (life < 9) {
+//     let shotgunsound = document.getElementById("shotgun");
+//     if (soundtrack == true) {
+//         shotgunsound.play();
+//         soundtrack = false;
+//     }
+
+//   }
+// }
 
 let soundOfShotgun = true;
 function toggleSound() {

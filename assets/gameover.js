@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   audio.loop = true;
   console.log("sound");
-  audio.play();
+  // audio.play();
 
   let soundButton = document.getElementById("sound");
 
