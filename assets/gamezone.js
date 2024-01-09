@@ -293,7 +293,7 @@ function nextQuestion() {
 
 document.getElementById("next").addEventListener("click", nextQuestion);
 numAnswer = nextQuestion();
-console.log("the right answer is: " + numAnswer);
+
 
 
 // Variable to store the input value
@@ -304,7 +304,7 @@ document.querySelector(".form-box").addEventListener("submit", function (event) 
     if (access == false) {
       access = true;
       let inputValue = document.getElementById("userInput").value;
-      console.log("the input value is " + inputValue);
+      
       let score = parseInt(document.getElementById("score").innerText, 10);
       let life = parseInt(document.getElementById("life").innerText, 10);
       if (document.getElementById("answer").innerText == inputValue) {
@@ -313,10 +313,10 @@ document.querySelector(".form-box").addEventListener("submit", function (event) 
         console.log(true);
         score += 1; // Increment score
       } else {
-        console.log(false);
+        
         life -= 1;
         let hp = document.getElementById("life").innerText;
-        console.log(hp);
+        
         if (hp < 2) {
           setTimeout(function () {
             window.location.href = "gameover.html";
@@ -328,8 +328,7 @@ document.querySelector(".form-box").addEventListener("submit", function (event) 
       document.getElementById("score").innerText = score;
       document.getElementById("life").innerText = life;
 
-      console.log("the score is: " + score);
-      console.log("the life is: " + life);
+
     }
     setTimeout(bullethole, 2750);
     shotgun();
@@ -337,7 +336,6 @@ document.querySelector(".form-box").addEventListener("submit", function (event) 
 
 function bullethole() {
   let life = parseInt(document.getElementById("life").textContent, 10);
-  console.log("Life value:", life);
 
   let friend1 = document.getElementById("friend1");
   let friend2 = document.getElementById("friend2");
@@ -348,7 +346,7 @@ function bullethole() {
   let friend7 = document.getElementById("friend7");
   let friend8 = document.getElementById("friend8");
   let friend9 = document.getElementById("friend9");
-  console.log("image replace1");
+
 
   if (life < 1) {
     friend1.style.backgroundImage = "url('assets/images/bullethole2.png')";
