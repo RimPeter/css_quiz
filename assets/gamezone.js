@@ -351,31 +351,31 @@ function bullethole() {
   console.log("image replace1");
 
   if (life < 1) {
-    friend1.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend1.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 2) {
-    friend2.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend2.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 3) {
-    friend3.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend3.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 4) {
-    friend4.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend4.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 5) {
-    friend5.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend5.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 6) {
-    friend6.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend6.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 7) {
-    friend7.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend7.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 8) {
-    friend8.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend8.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
   if (life < 9) {
-    friend9.style.backgroundImage = "url('../assets/images/bullethole.png')";
+    friend9.style.backgroundImage = "url('assets/images/bullethole2.png')";
   }
 }
 
