@@ -261,10 +261,6 @@ let table = {
     "text-indent",
 };
 
-//generate random number
-let randomNum = Math.floor(Math.random() * Object.keys(table).length);
-let numAnswer = Object.values(table)[randomNum];
-let numQuestion = Object.keys(table)[randomNum];
 
 //function for 'next question' button
 document.addEventListener("keydown", function (event) {
@@ -274,21 +270,22 @@ document.addEventListener("keydown", function (event) {
   }
 });
 let access = true;
-
+let soundtrack = true;
 
 function nextQuestion() {
   document.getElementById("answer").setAttribute("hidden", "the-answer");
   document.getElementById("userInput").value = "";
   document.getElementById("userInput").focus();
+  soundtrack = true;
   if (access == true) {
     access = false;
-    let randomNum = Math.floor(Math.random() * 8);
+    let randomNum = Math.floor(Math.random() * Object.keys(table).length);
     let numAnswer = Object.values(table)[randomNum];
     let numQuestion = Object.keys(table)[randomNum];
     document.getElementById("question").innerText = numQuestion;
     document.getElementById("answer").innerText = numAnswer;
     console.log("the answer will be: " + numAnswer);
-    let countdown = 30;
+  
     return numAnswer;
   }
   console.log(access);
@@ -298,7 +295,6 @@ document.getElementById("next").addEventListener("click", nextQuestion);
 numAnswer = nextQuestion();
 console.log("the right answer is: " + numAnswer);
 
-//function for the form section
 
 // Variable to store the input value
 document.querySelector(".form-box").addEventListener("submit", function (event) {
@@ -388,7 +384,11 @@ function shotgun() {
 
   if (life < 9) {
     let audio = document.getElementById("shotgun");
-    audio.play();
+    if (soundtrack == true) {
+        audio.play();
+        soundtrack = false;
+    }
+    
   }
 }
 
