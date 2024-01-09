@@ -26,4 +26,9 @@
   margin: 5vw;
   background-color: rgb(235, 220, 18);
   border-radius: 10px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
