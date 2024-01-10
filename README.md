@@ -36,6 +36,19 @@ The CSS Quiz Project is an interactive web-based game designed to test knowledge
 
 The game is compatible with modern web browsers like Chrome, Firefox, Safari, and Edge.
 
+## Screenshots
+
+![](assets/readme_images/css1.png)
+![](assets/readme_images/css2.png)
+![](assets/readme_images/css3.png)
+![](assets/readme_images/html1.png)
+![](assets/readme_images/html2.png)
+![](assets/readme_images/html3.png)
+![](assets/readme_images/start.png)
+![](assets/readme_images/gamezone.png)
+![](assets/readme_images/gameover.png)
+![](assets/readme_images/performance.png)
+
 ## Future Enhancements
 
 
