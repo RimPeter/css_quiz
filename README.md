@@ -58,6 +58,12 @@ The game is compatible with modern web browsers like Chrome, Firefox, Safari, an
 ![](assets/readme_images/html1.png)
 ### image of the performance by 'lighthouse'
 ![](assets/readme_images/performance.png)
+### all images for mobile size
+![](assets/readme_images/mstart.png)
+![](assets/readme_images/mgamezone1.png)
+![](assets/readme_images/mgamezone2.png)
+![](assets/readme_images/mgameover.png)
+
 
 ## Design and Color
 
