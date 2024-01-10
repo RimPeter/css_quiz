@@ -392,8 +392,11 @@ function bullethole() {
 let soundOfShotgun = true;
 function toggleSound() {
   soundOfShotgun = !soundOfShotgun; //toggle the state
+  joy = !joy;
 
-  var audio = document.getElementById("shotgun");
+  let audio = document.getElementById("shotgun");
+  let audioJoy = document.getElementById("joy");
+
   if (soundOfShotgun) {
     audio.muted = false; //unmute the sound
     document.getElementById("sound").innerText = "Sound ON";
@@ -401,6 +404,15 @@ function toggleSound() {
     audio.muted = true; //mute the sound
     document.getElementById("sound").innerText = "Sound OFF";
   }
+
+  if (joy) {
+    audioJoy.muted = false; //unmute the sound
+    document.getElementById("sound").innerText = "Sound ON";
+  } else {
+    audioJoy.muted = true; //mute the sound
+    document.getElementById("sound").innerText = "Sound OFF";
+  }
+
 }
 
 document.getElementById("sound").addEventListener("click", toggleSound);
