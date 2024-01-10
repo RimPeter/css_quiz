@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
   soundButton.addEventListener("click", function () {
     if (audio.paused) {
       audio.play();
-      soundButton.textContent = "Sound Off";
+      soundButton.textContent = "Sound is ON";
     } else {
       audio.pause();
-      soundButton.textContent = "Sound On";
+      soundButton.textContent = "Sound is OFF";
     }
   });
 });

@@ -402,15 +402,15 @@ function toggleSound() {
     document.getElementById("sound").innerText = "Sound ON";
   } else {
     audio.muted = true; //mute the sound
-    document.getElementById("sound").innerText = "Sound OFF";
+    document.getElementById("sound").innerText = "Sound is OFF";
   }
 
   if (joy) {
     audioJoy.muted = false; //unmute the sound
-    document.getElementById("sound").innerText = "Sound ON";
+    document.getElementById("sound").innerText = "Sound is ON";
   } else {
     audioJoy.muted = true; //mute the sound
-    document.getElementById("sound").innerText = "Sound OFF";
+    document.getElementById("sound").innerText = "Sound is OFF";
   }
 
 }
