@@ -6,8 +6,7 @@
 
 body {
   min-height: 100vh;
-  /* display: flex;
-    flex-direction: column; */
+  flex-direction: column; */
   background-color: bisque;
 }
 
@@ -36,7 +35,6 @@ body {
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: brown; */
   height: 300px;
   display: flex;
   justify-content: center;
@@ -47,7 +45,6 @@ body {
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
-  /* background-color: yellowgreen; */
   display: flex;
   justify-content: center;
   align-items: center;
