@@ -51,11 +51,11 @@ The game is compatible with modern web browsers like Chrome, Firefox, Safari, an
 ### image of the css validator for gameover
 ![](assets/readme_images/css3.png)
 ### image of the html validator for start page
-![](assets/readme_images/html1.png)
+![](assets/readme_images/html3.png)
 ### image of the html validator for gamezone
 ![](assets/readme_images/html2.png)
 ### image of the html validator for gameover
-![](assets/readme_images/html3.png)
+![](assets/readme_images/html1.png)
 ### image of the performance by 'lighthouse'
 ![](assets/readme_images/performance.png)
 
