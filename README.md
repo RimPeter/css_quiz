@@ -1,39 +1,44 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# CSS Quiz Project
 
-Welcome,
+## Project Overview
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The CSS Quiz Project is an interactive web-based game designed to test knowledge in CSS. The game consists of a series of questions related to CSS properties and concepts. Players answer questions, accumulate points, and the game tracks their progress through a scoring system. The game is styled using CSS and controlled through JavaScript.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+## Files in the Project
 
-## Codeanywhere Reminders
+1. **index.html** - The starting page of the quiz game. It includes a welcome message, a start button, and background music control.
+2. **gamezone.html** - The main quiz interface where questions are displayed, and users input their answers. It includes the score display, life tracker, and question navigation.
+3. **gameover.html** - Displayed when the user loses all lives. It shows a game over message and a restart button.
+4. **assets/style.css** - The CSS file for styling the starting page.
+5. **assets/gamezone.css** - The CSS file for styling the quiz interface.
+6. **assets/gameover.css** - The CSS file for styling the game over page.
+7. **assets/script.js** - JavaScript for handling events on the starting page.
+8. **assets/gamezone.js** - JavaScript for handling quiz logic, including question display, answer checking, and score management.
+9. **assets/gameover.js** - JavaScript for handling events on the game over page.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## Features
 
-`python3 -m http.server`
+- **Start Page**: Users are greeted with a welcome message and an option to control the background music.
+- **Quiz Interface**: Users are presented with CSS questions and a text box to input their answers. The interface includes score tracking, remaining lives, and a button to proceed to the next question.
+- **Sound Effects**: Interactive sound effects for correct or incorrect answers, which can be toggled on/off.
+- **Progress Tracking**: The game tracks the user's score and remaining lives.
+- **End Game Scenario**: On losing all lives, the user is directed to the game over page with an option to restart the quiz.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## How to Play
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+1. **Start the Game**: Open `index.html` in a web browser to start the game.
+2. **Answer Questions**: In the quiz interface, type your answer to the CSS question and submit.
+3. **Navigate**: Use the 'Next Question' button or the spacebar to proceed to the next question.
+4. **Keep Track**: Monitor your score and remaining lives.
+5. **Restart if Needed**: If you lose all your lives, use the 'Restart' button on the game over page to try again.
 
-`http_server`
+## Browser Compatibility
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+The game is compatible with modern web browsers like Chrome, Firefox, Safari, and Edge.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Future Enhancements
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
 
 ---
 
-Happy coding!
+**Note**: This is a web-based game and requires a web browser to run. The project is best viewed on a desktop or laptop for optimal experience.
