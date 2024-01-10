@@ -1,3 +1,4 @@
+// event listener to the 'restart'
 document.getElementById("restart").addEventListener("click", function () {
   window.location.href = "index.html";
 });
@@ -261,21 +262,26 @@ let table = {
     "text-indent",
 };
 
-//function for 'next question' button
+
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {
     event.preventDefault();
     document.getElementById("next").click();
   }
 });
+// 'access' is a control flag for 'submit' button and 'next question' button. Buttons are used once each time
 let access = true;
+// 'soundtrack' is a control flag to avoid the sound effect go off more then once for one question
 let soundtrack = true;
 
+//function for 'next question' button
 function nextQuestion() {
+  //reset elements:
   document.getElementById("answer").setAttribute("hidden", "the-answer");
   document.getElementById("userInput").value = "";
   document.getElementById("userInput").focus();
   soundtrack = true;
+  //check control flag
   if (access == true) {
     access = false;
     let randomNum = Math.floor(Math.random() * Object.keys(table).length);
@@ -287,38 +293,38 @@ function nextQuestion() {
 
     return numAnswer;
   }
-  console.log(access);
 }
 
+
+
+//eventlistener for next button
 document.getElementById("next").addEventListener("click", nextQuestion);
 numAnswer = nextQuestion();
 
-// Variable to store the input value
+// event listener to handle input
 document
   .querySelector(".form-box")
   .addEventListener("submit", function (event) {
     event.preventDefault();
     document.getElementById("answer").removeAttribute("hidden");
-
-    if (access == false) {
-      access = true;
-      let inputValue = document.getElementById("userInput").value;
-      let score = parseInt(document.getElementById("score").innerText, 10);
-      let life = parseInt(document.getElementById("life").innerText, 10);
-
+// check control flag. 
+    if (access == false) {                                                    //Check if answering is allowed
+      access = true;                                                          //Re-enable question access
+      let inputValue = document.getElementById("userInput").value;            //user input
+      let score = parseInt(document.getElementById("score").innerText, 10);   //current score
+      let life = parseInt(document.getElementById("life").innerText, 10);     //current life
+//check answer
       if (document.getElementById("answer").innerText == inputValue) {
-        score += 1; // Increment score
-        console.log("woo-hoo2");
+        score += 1;                                                           // Increment score
         let joy = document.getElementById("joy");
-        joy.play();
+        joy.play();                                                           //play 'joy' sound effect
       } else {
-        life -= 1;
-        console.log("oh-oh2");
+        life -= 1;                                                            //reduce life
         let shotgunsound = document.getElementById("shotgun");
-        shotgunsound.play();
+        shotgunsound.play();                                                  // play 'shotgun' sound effect
 
-        let hp = document.getElementById("life").innerText;
-
+//after last losing last life, the game waits 7 seconds before going to the next page, so the animation can play out
+        let hp = document.getElementById("life").innerText;                  
         if (hp < 2) {
           setTimeout(function () {
             window.location.href = "gameover.html";
@@ -327,13 +333,14 @@ document
           console.log("GAME OVER");
         }
       }
-
+// update score and life
       document.getElementById("score").innerText = score;
       document.getElementById("life").innerText = life;
     }
-    setTimeout(bullethole, 2750);
+    setTimeout(bullethole, 2750);//timing for bullethole background image
   });
 
+  //Each 'friend' represents a life and is updated with a 'bullethole' image as lives are lost
 function bullethole() {
   let life = parseInt(document.getElementById("life").textContent, 10);
 
@@ -376,21 +383,10 @@ function bullethole() {
   }
 }
 
-// function shotgun() {
-//   let life = parseInt(document.getElementById("life").textContent, 10);
-
-//   if (life < 9) {
-//     let shotgunsound = document.getElementById("shotgun");
-//     if (soundtrack == true) {
-//         shotgunsound.play();
-//         soundtrack = false;
-//     }
-
-//   }
-// }
-
+// Sound control flag
 let soundOfShotgun = true;
-function toggleSound() {
+
+function toggleSound() {// Function to toggle sound on and off
   soundOfShotgun = !soundOfShotgun; //toggle the state
   joy = !joy;
 
@@ -412,7 +408,6 @@ function toggleSound() {
     audioJoy.muted = true; //mute the sound
     document.getElementById("sound").innerText = "Sound is OFF";
   }
-
 }
 
 document.getElementById("sound").addEventListener("click", toggleSound);

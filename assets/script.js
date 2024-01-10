@@ -1,18 +1,18 @@
-document.getElementById('start').addEventListener('click', function() {
-window.location.href = 'gamezone.html';
+// add eventlistener to the start button
+document.getElementById("start").addEventListener("click", function () {
+  // relocate to gamezone
+  window.location.href = "gamezone.html";
 });
 
-
-
+// eventlistener for fully loaded page
 document.addEventListener("DOMContentLoaded", function () {
+  // background music
   let audio = document.getElementById("startmusic");
 
   audio.loop = true;
-  console.log("sound");
-  // audio.play();
-
+  // provide sound button
   let soundButton = document.getElementById("sound");
-
+  // function for button text
   soundButton.addEventListener("click", function () {
     if (audio.paused) {
       audio.play();

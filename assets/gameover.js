@@ -1,14 +1,15 @@
+// eventlistener for restart
 document.getElementById("restart").addEventListener("click", function () {
+  // relocate to starting page
   window.location.href = "index.html";
 });
-
+// eventlistener for the fully loaded page
 document.addEventListener("DOMContentLoaded", function () {
+  // sad music audio
   let audio = document.getElementById("sadmusic");
 
   audio.loop = true;
-  console.log("sound");
-  // audio.play();
-
+  // create control for user to background music
   let soundButton = document.getElementById("sound");
 
   soundButton.addEventListener("click", function () {
