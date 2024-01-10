@@ -61,7 +61,6 @@ body {
   border-radius: 5px;
   background-color: blueviolet;
   margin-top: 200px;
-  
 }
 
 #start {
@@ -73,18 +72,16 @@ body {
   border-radius: 50%;
   color: transparent;
   cursor: pointer;
-  
-  
 }
 
 #sound {
-    font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
   cursor: pointer;
 }
 
 h1 {
-      font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
   font-size: 1.6em;
 }

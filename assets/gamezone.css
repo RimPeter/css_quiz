@@ -5,12 +5,12 @@
 }
 
 body * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
 
 #background {
-  background-image: url('../assets/images/question-zone-background.jpeg');
+  background-image: url("../assets/images/question-zone-background.jpeg");
   width: 90vw;
   max-width: 1000px;
   /* background-color: cadetblue; */
@@ -24,7 +24,7 @@ body * {
 }
 
 #restart {
-    background-color: rgb(180, 118, 238);
+  background-color: rgb(180, 118, 238);
 }
 
 header {
@@ -44,13 +44,6 @@ footer {
   display: none;
 }
 
-.outer-box {
-}
-
-.question-box {
-  /* background-color: lightblue; */
-}
-
 .form-box {
   /* background-color: brown; */
   display: flex;
@@ -58,7 +51,7 @@ footer {
 }
 
 #submit {
-    background-color: rgb(180, 118, 238);
+  background-color: rgb(180, 118, 238);
 }
 
 .number-box {
@@ -66,35 +59,31 @@ footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center ;
+  justify-content: center;
 }
 
 .container {
-padding-left: 25px;
-padding-right: 25px;
-border: 5px solid rgb(18, 230, 18);
-border-radius: 10px;
-/* margin: 5px; */
-background-color: rgb(235, 220, 18);
-min-height: 40px;
-font-size: 1.2em;
-max-width: 90vw;
-
-}
-
-.next-question {
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 5px solid rgb(18, 230, 18);
+  border-radius: 10px;
+  /* margin: 5px; */
+  background-color: rgb(235, 220, 18);
+  min-height: 40px;
+  font-size: 1.2em;
+  max-width: 90vw;
 }
 
 #soundbutton {
-    display: flex;
-    justify-content: center;
-    background-color: rgb(180, 118, 238);
+  display: flex;
+  justify-content: center;
+  background-color: rgb(180, 118, 238);
 }
 
 #sound {
-    background-color: transparent;
-    border: none;
-    font-size: 1.2em;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
 }
 
 .friends {
@@ -103,7 +92,7 @@ max-width: 90vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-    width: 90vw;
+  width: 90vw;
   max-width: 860px;
 }
 
