@@ -87,8 +87,8 @@ body * {
 
 .friend_property {
   border: 2px solid black;
-  height: 140px;
-  width: 140px;
+  height: 90px;
+  width: 70px;
   border-radius: 10px;
   background-size: cover;
   background-position: center;
