@@ -266,7 +266,7 @@ let listOfQuestions = {
 document.addEventListener("keydown", function (event) {
   if (event.code === "Space") {
     event.preventDefault();
-    document.getElementById("next").click();
+    nextQuestion();
   }
 });
 // 'access' is a control flag for 'submit' button and 'next question' button. Buttons are used once each time
