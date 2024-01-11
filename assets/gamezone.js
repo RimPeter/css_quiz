@@ -4,7 +4,7 @@ document.getElementById("restart").addEventListener("click", function () {
 });
 
 // question list (140 questions)
-let table = {
+let listOfQuestions = {
   "What property is used to change the text color of an element?": "color",
   "Which property controls the visibility of an element?": "visibility",
   "What is the default display value for a <div> element?": "block",
@@ -270,9 +270,9 @@ document.addEventListener("keydown", function (event) {
   }
 });
 // 'access' is a control flag for 'submit' button and 'next question' button. Buttons are used once each time
-let access = true;
+let buttonAccess = true;
 // 'soundtrack' is a control flag to avoid the sound effect go off more then once for one question
-let soundtrack = true;
+let soundtrackAccess = true;
 
 //function for 'next question' button
 function nextQuestion() {
@@ -280,18 +280,18 @@ function nextQuestion() {
   document.getElementById("answer").setAttribute("hidden", "the-answer");
   document.getElementById("userInput").value = "";
   document.getElementById("userInput").focus();
-  soundtrack = true;
+  soundtrackAccess = true;
   //check control flag
-  if (access == true) {
-    access = false;
-    let randomNum = Math.floor(Math.random() * Object.keys(table).length);
-    let numAnswer = Object.values(table)[randomNum];
-    let numQuestion = Object.keys(table)[randomNum];
-    document.getElementById("question").innerText = numQuestion;
-    document.getElementById("answer").innerText = numAnswer;
-    console.log("the answer will be: " + numAnswer);
+  if (buttonAccess == true) {
+    buttonAccess = false;
+    let randomNum = Math.floor(Math.random() * Object.keys(listOfQuestions).length);
+    let AnswerForUser = Object.values(listOfQuestions)[randomNum];
+    let QuestionForUser = Object.keys(listOfQuestions)[randomNum];
+    document.getElementById("question").innerText = QuestionForUser;
+    document.getElementById("answer").innerText = AnswerForUser;
+    console.log("the answer will be: " + AnswerForUser);
 
-    return numAnswer;
+    return AnswerForUser;
   }
 }
 
@@ -301,6 +301,7 @@ function nextQuestion() {
 document.getElementById("next").addEventListener("click", nextQuestion);
 numAnswer = nextQuestion();
 
+
 // event listener to handle input
 document
   .querySelector(".form-box")
@@ -308,24 +309,24 @@ document
     event.preventDefault();
     document.getElementById("answer").removeAttribute("hidden");
 // check control flag. 
-    if (access == false) {                                                    //Check if answering is allowed
-      access = true;                                                          //Re-enable question access
-      let inputValue = document.getElementById("userInput").value;            //user input
-      let score = parseInt(document.getElementById("score").innerText, 10);   //current score
-      let life = parseInt(document.getElementById("life").innerText, 10);     //current life
+    if (buttonAccess == false) {                                                    
+      buttonAccess = true;                                                          
+      let inputValue = document.getElementById("userInput").value;            
+      let score = parseInt(document.getElementById("score").innerText, 10);   
+      let friendsRemained = parseInt(document.getElementById("life").innerText, 10);     
 //check answer
       if (document.getElementById("answer").innerText == inputValue) {
-        score += 1;                                                           // Increment score
+        score += 1;                                                           
         let joy = document.getElementById("joy");
-        joy.play();                                                           //play 'joy' sound effect
+        joy.play();                                                           
       } else {
-        life -= 1;                                                            //reduce life
+        friendsRemained -= 1;                                                            
         let shotgunsound = document.getElementById("shotgun");
-        shotgunsound.play();                                                  // play 'shotgun' sound effect
+        shotgunsound.play();                                                  
 
 //after last losing last life, the game waits 7 seconds before going to the next page, so the animation can play out
-        let hp = document.getElementById("life").innerText;                  
-        if (hp < 2) {
+        // let hp = document.getElementById("life").innerText;                  
+        if (friendsRemained < 1) {
           setTimeout(function () {
             window.location.href = "gameover.html";
           }, 7000);
@@ -335,7 +336,7 @@ document
       }
 // update score and life
       document.getElementById("score").innerText = score;
-      document.getElementById("life").innerText = life;
+      document.getElementById("life").innerText = friendsRemained;
     }
     setTimeout(bullethole, 2750);//timing for bullethole background image
   });
